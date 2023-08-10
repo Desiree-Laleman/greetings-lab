@@ -13,4 +13,8 @@ describe("HtmlGreeter class", () => {
     const htmlGreeter: HtmlGreeter = new HtmlGreeter("Sup", undefined);
     expect(htmlGreeter.tagName).toBe("h1");
   });
+  test("the greet method is overwritten and constructs a string with the appropriate tagName", () => {
+    const htmlGreeter: HtmlGreeter = new HtmlGreeter("Sup", "p");
+    expect(htmlGreeter.greet("Desiree")).toBe("<p>Sup, Desiree!</p>");
+  });
 });
